@@ -1,79 +1,79 @@
-import React from "react";
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucas Decor</title>
 
-export default function LucasDecorSite() {
-  return (
-    <div className="w-full min-h-screen bg-gray-100 text-gray-900 font-sans">
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f3f3f3; color: #333; }
+    header {
+      background: white; padding: 20px;
+      display: flex; justify-content: space-between; align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .btn {
+      padding: 10px 18px; border-radius: 10px; text-decoration: none;
+      color: white; font-weight: bold;
+    }
+    .whats { background: #059669; }
+    .insta { background: #db2777; }
 
-      {/* Header */}
-      <header className="bg-white shadow-md p-4 flex justify-between items-center">
-        <h1 className="text-2xl font-bold text-emerald-700">Lucas Decor</h1>
+    .carousel {
+      display: flex; overflow-x: scroll;
+      scroll-snap-type: x mandatory; scroll-behavior: smooth;
+      width: 100%; height: 350px;
+    }
+    .carousel img {
+      width: 100%; height: 100%; object-fit: cover;
+      flex-shrink: 0; scroll-snap-align: center;
+    }
 
-        <div className="flex gap-4">
-          https://wa.me/11967500305
-            WhatsApp
-          </a>
+    section { padding: 30px; }
+    footer {
+      text-align: center; padding:20px; color:#666;
+    }
+  </style>
 
-          https://www.instagram.com/lucassantosdecorgru/
-            Instagram
-          </a>
-        </div>
-      </header>
+</head>
+<body>
 
-      {/* Hero / Carousel */}
-      <section className="w-full overflow-hidden relative mt-4">
-        <div className="carousel w-full h-72 md:h-96 rounded-xl shadow-lg">
+  <!-- Header -->
+  <header>
+    <h1 style="color:#047857">Lucas Decor</h1>
 
-          <style>
-            {`
-              .carousel {
-                display: flex;
-                overflow-x: scroll;
-                scroll-snap-type: x mandatory;
-                scroll-behavior: smooth;
-              }
-              .carousel img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                flex-shrink: 0;
-                scroll-snap-align: center;
-              }
-            `}
-          </style>
-
-          {/* 🔻 ADICIONE SUAS IMAGENS AQUI 🔻 */}
-          {/* Exemplo:
-              /img1.jpg
-              /img2.jpg
-              /img3.jpg
-          */}
-
-        </div>
-      </section>
-
-      {/* Sobre */}
-      <section className="p-6 mt-6">
-        <h2 className="text-xl font-bold mb-2 text-emerald-700">Sobre a Lucas Decor</h2>
-        <p className="text-gray-700 leading-relaxed">
-          Trabalhamos com decoração personalizada para festas e eventos,
-          criando ambientes completos com cenários profissionais, mesas,
-          elementos temáticos, iluminação e arranjos decorativos.
-        </p>
-      </section>
-
-      {/* CTA */}
-      <section className="p-6 flex flex-col items-center">
-        <h3 className="text-lg font-semibold mb-4">Fale conosco</h3>
-
-        https://wa.me/11967500305
-          Chamar no WhatsApp
-        </a>
-      </section>
-
-      {/* Footer */}
-      <footer className="text-center p-4 text-gray-500 mt-10">
-        © {new Date().getFullYear()} Lucas Decor — Todos os direitos reservados.
-      </footer>
+    <div style="display:flex; gap:10px;">
+      <a href="https://wa.me/11967500305" class="btn whats" target="_blank">WhatsApp</a>
+      <a href="https://www.instagram.com/lucassantosdecorgru/" class="btn insta" target="_blank">Instagram</a>
     </div>
-  );
-}
+  </header>
+
+  <!-- Carousel -->
+  <div class="carousel">
+    <!-- 🔻 Substitua pelos nomes das suas imagens: -->
+    <img src="img/img1.jpg" alt="Decoração 1">
+    <img src="img/img2.jpg" alt="Decoração 2">
+    <img src="img/img3.jpg" alt="Decoração 3">
+  </div>
+
+  <!-- Sobre -->
+  <section>
+    <h2 style="color:#047857;">Sobre a Lucas Decor</h2>
+    <p>
+      Trabalhamos com decoração personalizada para festas e eventos, criando ambientes completos
+      com cenários profissionais, mesas, elementos temáticos, iluminação e arranjos decorativos.
+    </p>
+  </section>
+
+  <!-- CTA -->
+  <section style="text-align:center;">
+    <h3>Fale conosco</h3>
+    <a href="https://wa.me/11967500305" class="btn whats" target="_blank">Chamar no WhatsApp</a>
+  </section>
+
+  <footer>
+    © 2026 Lucas Decor — Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>
